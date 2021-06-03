@@ -1,9 +1,11 @@
 os.which() {
-	local feature
-
 	[[ $# -gt 0 ]] || set -- dist
 
+	local feature
+
 	for feature; do
+		local actual
+
 		case $feature in
 		name|platform)
 			actual=$(uname -s); actual=${actual,,}
