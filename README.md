@@ -15,7 +15,7 @@ Directory organization
   The directory is generally organized into application subdirectories.  Many of these applications are common
   applications that are easily accessible on every platform.
 
-- `debian`: Codes which can only be used on Debian or derivaties (e.g. Ubuntu)
+- `debian`: Codes which can only be used on Debian or derivatives (e.g. Ubuntu)
 
   The directory is generally organized into application subdirectories.  Codes in this category mostly deal with the
-  provisioning (i.e. installation and configuration) of the relevant application.
+  provisioning (i.e. installation and configuration) of the relevant application, hence require root privileges.
