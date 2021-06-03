@@ -1,5 +1,5 @@
-Bash code compendia
-===================
+Bash code compendium
+====================
 
 Directory organization
 ----------------------
