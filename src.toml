@@ -1,0 +1,1033 @@
+root      = "src"
+extension = ".sh"
+
+# collections {{{
+[[symbols]]
+	symbol  = "/"
+	depends = [
+		"all/",
+		"any/",
+		"debian/",
+	]
+[[symbols]]
+	symbol  = "default"
+	depends = [
+		"minimal",
+	]
+[[symbols]]
+	symbol  = "minimal"
+	depends = [
+		"all/main/prelude",
+		"all/kernel/die"
+	]
+[[symbols]]
+	symbol  = "net"
+	depends = [
+		"any/net/cat",
+		"debian/net/wait",
+	]
+[[symbols]]
+	symbol  = "standard"
+	depends = [
+		"all/main/prelude",
+		"all/main/locale",
+		"all/main/progname",
+		"all/kernel/die",
+		"all/kernel/cry",
+		"all/kernel/say",
+	]
+[[symbols]]
+	symbol  = "standard+"
+	depends = [
+		"all/standard",
+		"all/kernel/ensure",
+	]
+[[symbols]]
+	symbol  = "ui"
+	depends = [
+		"all/kernel/cry",
+		"all/kernel/die",
+		"all/kernel/getting",
+		"all/kernel/running",
+		"all/kernel/waiting",
+	]
+[[symbols]]
+	symbol  = "ui-"
+	depends = [
+		"ui",
+
+		"all/kernel/bug",
+		"all/kernel/bye",
+		"all/kernel/notok",
+		"all/kernel/ok",
+		"all/kernel/running-",
+		"all/kernel/say",
+		"all/kernel/verbose",
+	]
+[[symbols]]
+	symbol  = "ui/dark"
+	depends = [
+		"all/ui/dark",
+	]
+[[symbols]]
+	symbol  = "ui/light"
+	depends = [
+		"all/ui/light",
+	]
+# }}}
+
+# all {{{
+
+# array {{{
+# -- files
+[[symbols]]
+	symbol  = "all/array/contains"
+[[symbols]]
+	symbol  = "all/array/contains-"
+[[symbols]]
+	symbol  = "all/array/empty"
+[[symbols]]
+	symbol  = "all/array/join"
+[[symbols]]
+	symbol  = "all/array/join-"
+[[symbols]]
+	symbol  = "all/array/present"
+# -- directory
+[[symbols]]
+	symbol  = "all/array/"
+	depends = [
+		"all/array/contains",
+		"all/array/contains-",
+		"all/array/empty",
+		"all/array/join",
+		"all/array/join-",
+		"all/array/present",
+	]
+# }}}
+
+# can {{{
+# -- files
+[[symbols]]
+	symbol  = "all/can/call"
+[[symbols]]
+	symbol  = "all/can/call-"
+	depends = [
+		"all/kernel/die-",
+		"all/can/call",
+	]
+[[symbols]]
+	symbol  = "all/can/get"
+[[symbols]]
+	symbol  = "all/can/get-"
+	depends = [
+		"all/kernel/die-",
+		"all/can/get",
+	]
+[[symbols]]
+	symbol  = "all/can/overwrite"
+[[symbols]]
+	symbol  = "all/can/overwrite-"
+	depends = [
+		"all/kernel/die-",
+		"all/can/overwrite",
+	]
+[[symbols]]
+	symbol  = "all/can/read"
+[[symbols]]
+	symbol  = "all/can/read-"
+	depends = [
+		"all/kernel/die-",
+		"all/can/read",
+	]
+[[symbols]]
+	symbol  = "all/can/run"
+[[symbols]]
+	symbol  = "all/can/run-"
+	depends = [
+		"all/kernel/die-",
+		"all/can/run",
+	]
+[[symbols]]
+	symbol  = "all/can/sudo"
+[[symbols]]
+	symbol  = "all/can/sudo-"
+	depends = [
+		"all/kernel/die-",
+		"all/can/sudo",
+	]
+[[symbols]]
+	symbol  = "all/can/write"
+[[symbols]]
+	symbol  = "all/can/write-"
+	depends = [
+		"all/kernel/die-",
+		"all/can/write",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "all/can/"
+	depends = [
+		"all/can/call",
+		"all/can/call-",
+		"all/can/get",
+		"all/can/get-",
+		"all/can/overwrite",
+		"all/can/overwrite-",
+		"all/can/read",
+		"all/can/read-",
+		"all/can/run",
+		"all/can/run-",
+		"all/can/sudo",
+		"all/can/sudo-",
+		"all/can/write",
+		"all/can/write-",
+	]
+# }}}
+
+# color {{{
+# -- files
+[[symbols]]
+	symbol  = "all/color/cecho"
+	depends = [
+		"all/color/color",
+	]
+[[symbols]]
+	symbol  = "all/color/cechon"
+	depends = [
+		"all/color/color",
+	]
+[[symbols]]
+	symbol  = "all/color/color"
+# -- directory
+[[symbols]]
+	symbol  = "all/color/"
+	depends = [
+		"all/color/cecho",
+		"all/color/cechon",
+		"all/color/color",
+	]
+# }}}
+
+# debug {{{
+# -- files
+[[symbols]]
+	symbol  = "all/debug/backtrace"
+[[symbols]]
+	symbol  = "all/debug/nope"
+[[symbols]]
+	symbol  = "all/debug/p"
+# -- directory
+[[symbols]]
+	symbol  = "all/debug/"
+	depends = [
+		"all/debug/backtrace",
+		"all/debug/nope",
+		"all/debug/p",
+	]
+# }}}
+
+# dict {{{
+# -- files
+[[symbols]]
+	symbol  = "all/dict/dup"
+[[symbols]]
+	symbol  = "all/dict/marshal"
+[[symbols]]
+	symbol  = "all/dict/merge"
+# -- directory
+[[symbols]]
+	symbol  = "all/dict/"
+	depends = [
+		"all/dict/dup",
+		"all/dict/marshal",
+		"all/dict/merge",
+		"all/dir/climb",
+		"all/dir/inside",
+	]
+# }}}
+
+# dir {{{
+# -- files
+[[symbols]]
+	symbol  = "all/dir/climb"
+[[symbols]]
+	symbol  = "all/dir/inside"
+# -- directory
+[[symbols]]
+	symbol  = "all/dir/"
+	depends = [
+		"all/dir/climb",
+		"all/dir/inside",
+	]
+# }}}
+
+# file {{{
+# -- files
+[[symbols]]
+	symbol  = "all/file/chmog"
+[[symbols]]
+	symbol  = "all/file/cp"
+	depends = [
+		"all/file/chmog",
+	]
+[[symbols]]
+	symbol  = "all/file/expired"
+[[symbols]]
+	symbol  = "all/file/ln"
+	depends = [
+		"all/file/chmog",
+	]
+[[symbols]]
+	symbol  = "all/file/mv"
+	depends = [
+		"all/file/chmog",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "all/file/"
+	depends = [
+		"all/file/chmog",
+		"all/file/cp",
+		"all/file/expired",
+		"all/file/ln",
+		"all/file/mv",
+	]
+# }}}
+
+# flag {{{
+# -- files
+[[symbols]]
+	symbol  = "all/flag/mesg"
+# -- directory
+[[symbols]]
+	symbol  = "all/flag/"
+	depends = [
+		"all/flag/mesg",
+	]
+# }}}
+
+# io {{{
+# -- files
+[[symbols]]
+	symbol  = "all/io/capture"
+[[symbols]]
+	symbol  = "all/io/err"
+[[symbols]]
+	symbol  = "all/io/out"
+[[symbols]]
+	symbol  = "all/io/sponge"
+	depends = [
+		"all/kernel/die",
+		"all/kernel/intemp",
+		"all/zip/cat",
+		"all/file/chmog",
+	]
+[[symbols]]
+	symbol  = "all/io/sponge-"
+	depends = [
+		"all/kernel/die",
+		"all/file/chmog",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "all/io/"
+	depends = [
+		"all/io/capture",
+		"all/io/err",
+		"all/io/out",
+		"all/io/sponge",
+		"all/io/sponge-",
+	]
+# }}}
+
+# is {{{
+# -- files
+[[symbols]]
+	symbol  = "all/is/empty"
+[[symbols]]
+	symbol  = "all/is/empty-"
+	depends = [
+		"all/kernel/die-",
+		"all/is/empty",
+	]
+[[symbols]]
+	symbol  = "all/is/interactive"
+[[symbols]]
+	symbol  = "all/is/interactive-"
+	depends = [
+		"all/kernel/die-",
+		"all/is/interactive",
+	]
+[[symbols]]
+	symbol  = "all/is/piped"
+[[symbols]]
+	symbol  = "all/is/piped-"
+	depends = [
+		"all/kernel/die-",
+		"all/is/piped",
+	]
+[[symbols]]
+	symbol  = "all/is/present"
+[[symbols]]
+	symbol  = "all/is/present-"
+	depends = [
+		"all/kernel/die-",
+		"all/is/present",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "all/is/"
+	depends = [
+		"all/is/empty",
+		"all/is/empty-",
+		"all/is/interactive",
+		"all/is/interactive-",
+		"all/is/piped",
+		"all/is/piped-",
+		"all/is/present",
+		"all/is/present-",
+	]
+# }}}
+
+# kernel {{{
+# -- files
+[[symbols]]
+	symbol  = "all/kernel/available"
+[[symbols]]
+	symbol  = "all/kernel/bug"
+[[symbols]]
+	symbol  = "all/kernel/bug-"
+	depends = [
+		"all/kernel/bug",
+	]
+[[symbols]]
+	symbol  = "all/kernel/bye"
+[[symbols]]
+	symbol  = "all/kernel/bye-"
+	depends = [
+		"all/kernel/bye",
+	]
+[[symbols]]
+	symbol  = "all/kernel/contains"
+[[symbols]]
+	symbol  = "all/kernel/cry"
+[[symbols]]
+	symbol  = "all/kernel/cry-"
+	depends = [
+		"all/kernel/cry",
+	]
+[[symbols]]
+	symbol  = "all/kernel/die"
+[[symbols]]
+	symbol  = "all/kernel/die-"
+	depends = [
+		"all/kernel/die",
+	]
+[[symbols]]
+	symbol  = "all/kernel/ensure"
+	depends = [
+		"all/kernel/die",
+	]
+[[symbols]]
+	symbol  = "all/kernel/ensure-"
+	depends = [
+		"all/kernel/die",
+	]
+[[symbols]]
+	symbol  = "all/kernel/getting"
+[[symbols]]
+	symbol  = "all/kernel/haw"
+[[symbols]]
+	symbol  = "all/kernel/intemp"
+[[symbols]]
+	symbol  = "all/kernel/load"
+	depends = [
+		"all/kernel/die",
+	]
+[[symbols]]
+	symbol  = "all/kernel/must"
+	depends = [
+		"all/kernel/die",
+	]
+[[symbols]]
+	symbol  = "all/kernel/notok"
+[[symbols]]
+	symbol  = "all/kernel/ok"
+[[symbols]]
+	symbol  = "all/kernel/running"
+[[symbols]]
+	symbol  = "all/kernel/running-"
+[[symbols]]
+	symbol  = "all/kernel/say"
+[[symbols]]
+	symbol  = "all/kernel/should"
+	depends = [
+		"all/kernel/cry",
+	]
+[[symbols]]
+	symbol  = "all/kernel/verbose"
+[[symbols]]
+	symbol  = "all/kernel/verbose-"
+	depends = [
+		"all/kernel/verbose",
+	]
+[[symbols]]
+	symbol  = "all/kernel/waiting"
+# -- directory
+[[symbols]]
+	symbol  = "all/kernel/"
+	depends = [
+		"all/kernel/available",
+		"all/kernel/bug",
+		"all/kernel/bug-",
+		"all/kernel/bye",
+		"all/kernel/bye-",
+		"all/kernel/contains",
+		"all/kernel/cry",
+		"all/kernel/cry-",
+		"all/kernel/die",
+		"all/kernel/die-",
+		"all/kernel/ensure",
+		"all/kernel/ensure-",
+		"all/kernel/getting",
+		"all/kernel/haw",
+		"all/kernel/intemp",
+		"all/kernel/load",
+		"all/kernel/must",
+		"all/kernel/running",
+		"all/kernel/running-",
+		"all/kernel/say",
+		"all/kernel/should",
+		"all/kernel/verbose",
+		"all/kernel/verbose-",
+		"all/kernel/waiting",
+	]
+# }}}
+
+# main {{{
+# -- files
+[[symbols]]
+	symbol  = "all/main/bash"
+[[symbols]]
+	symbol  = "all/main/locale"
+[[symbols]]
+	symbol  = "all/main/prelude"
+[[symbols]]
+	symbol  = "all/main/progname"
+# -- directory
+[[symbols]]
+	symbol  = "all/main/"
+	depends = [
+		"all/main/bash",
+		"all/main/prelude",
+		"all/main/locale",
+		"all/main/progname",
+	]
+# }}}
+
+# path {{{
+# -- files
+[[symbols]]
+	symbol  = "all/path/base"
+[[symbols]]
+	symbol  = "all/path/covered"
+[[symbols]]
+	symbol  = "all/path/dir"
+	depends = [
+		"all/path/normalize",
+	]
+[[symbols]]
+	symbol  = "all/path/ext"
+[[symbols]]
+	symbol  = "all/path/idantic"
+[[symbols]]
+	symbol  = "all/path/name"
+[[symbols]]
+	symbol  = "all/path/normalize"
+[[symbols]]
+	symbol  = "all/path/subext"
+[[symbols]]
+	symbol  = "all/path/suffixize"
+	depends = [
+		"all/path/dir",
+		"all/path/base",
+		"all/path/name",
+		"all/path/ext",
+	]
+[[symbols]]
+	symbol  = "all/path/volatile"
+# -- directory
+[[symbols]]
+	symbol  = "all/path/"
+	depends = [
+		"all/path/base",
+		"all/path/covered",
+		"all/path/dir",
+		"all/path/ext",
+		"all/path/idantic",
+		"all/path/name",
+		"all/path/normalize",
+		"all/path/subext",
+		"all/path/suffixize",
+		"all/path/volatile",
+	]
+# }}}
+
+# self {{{
+# -- files
+[[symbols]]
+	symbol  = "all/self/name"
+[[symbols]]
+	symbol  = "all/self/path"
+[[symbols]]
+	symbol  = "all/self/src"
+	depends = [
+		"all/self/path",
+	]
+[[symbols]]
+	symbol  = "all/self/version"
+# -- directory
+[[symbols]]
+	symbol  = "all/self/"
+	depends = [
+		"all/self/name",
+		"all/self/path",
+		"all/self/src",
+		"all/self/version",
+	]
+# }}}
+
+# string {{{
+# -- files
+[[symbols]]
+	symbol  = "all/string/prefixed"
+[[symbols]]
+	symbol  = "all/string/suffixed"
+[[symbols]]
+	symbol  = "all/string/unprefix"
+	depends = [
+		"all/string/unprefix-",
+	]
+[[symbols]]
+	symbol  = "all/string/unprefix-"
+[[symbols]]
+	symbol  = "all/string/unsuffix"
+	depends = [
+		"all/string/unsuffix-",
+	]
+[[symbols]]
+	symbol  = "all/string/unsuffix-"
+# -- directory
+[[symbols]]
+	symbol  = "all/string/"
+	depends = [
+		"all/string/prefixed",
+		"all/string/suffixed",
+		"all/string/unprefix",
+		"all/string/unprefix-",
+		"all/string/unsuffix",
+		"all/string/unsuffix-",
+	]
+# }}}
+
+# temp {{{
+# -- files
+[[symbols]]
+	symbol  = "all/temp/inside"
+# -- directory
+[[symbols]]
+	symbol  = "all/temp/"
+	depends = [
+		"all/temp/inside",
+	]
+# }}}
+
+# text {{{
+# -- files
+[[symbols]]
+	symbol  = "all/text/fix"
+	depends = [
+		"all/kernel/die",
+		"all/text/unfix",
+	]
+[[symbols]]
+	symbol  = "all/text/unfix"
+	depends = [
+		"all/kernel/die",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "all/text/"
+	depends = [
+		"all/text/fix",
+		"all/text/unfix",
+	]
+# }}}
+
+# ui {{{
+# -- files
+[[symbols]]
+	symbol  = "all/ui/dark"
+	depends = [
+		"ui",
+	]
+[[symbols]]
+	symbol  = "all/ui/dark-"
+	depends = [
+		"ui-",
+	]
+[[symbols]]
+	symbol  = "all/ui/light"
+	depends = [
+		"ui",
+	]
+[[symbols]]
+	symbol  = "all/ui/light-"
+	depends = [
+		"ui-",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "all/ui/"
+	depends = [
+		"all/ui/dark-",
+		"all/ui/light-",
+	]
+# }}}
+
+# zip {{{
+# -- files
+[[symbols]]
+	symbol  = "all/zip/cat"
+	depends = [
+		"all/kernel/die",
+		"all/kernel/intemp",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "all/zip/"
+	depends = [
+		"all/zip/cat",
+	]
+# }}}
+
+# all/ {{{
+[[symbols]]
+	symbol  = "all/"
+	depends = [
+		"all/main/",
+		"all/kernel/",
+
+		"all/array/",
+		"all/can/",
+		"all/debug/",
+		"all/dict/",
+		"all/dir/",
+		"all/file/",
+		"all/flag/",
+		"all/io/",
+		"all/is/",
+		"all/path/",
+		"all/self/",
+		"all/string/",
+		"all/temp/",
+		"all/text/",
+		"all/ui/",
+		"all/zip/",
+	]
+# }}}
+
+# }}}
+
+# any {{{
+
+# git {{{
+# -- files
+[[symbols]]
+	symbol  = "any/git/clone"
+	depends = [
+		"all/kernel/die",
+		"all/kernel/waiting",
+	]
+[[symbols]]
+	symbol  = "any/git/defaultbr"
+	depends = [
+		"any/git/sane-",
+	]
+[[symbols]]
+	symbol  = "any/git/reset"
+[[symbols]]
+	symbol  = "any/git/sane"
+[[symbols]]
+	symbol  = "any/git/sane-"
+	depends = [
+		"all/kernel/die",
+		"any/git/sane",
+	]
+[[symbols]]
+	symbol  = "any/git/switch"
+	depends = [
+		"any/git/defaultbr",
+	]
+[[symbols]]
+	symbol  = "any/git/top"
+	depends = [
+		"any/git/sane-",
+		"any/git/where",
+	]
+[[symbols]]
+	symbol  = "any/git/unmodified"
+[[symbols]]
+	symbol  = "any/git/unmodified-"
+	depends = [
+		"all/kernel/die",
+		"any/git/unmodified",
+	]
+[[symbols]]
+	symbol  = "any/git/update"
+	depends = [
+		"all/kernel/waiting",
+	]
+[[symbols]]
+	symbol  = "any/git/valid"
+[[symbols]]
+	symbol  = "any/git/valid-"
+	depends = [
+		"all/kernel/die",
+		"any/git/valid",
+	]
+[[symbols]]
+	symbol  = "any/git/where"
+	depends = [
+		"all/kernel/die",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "any/git/"
+	depends = [
+		"any/git/clone",
+		"any/git/defaultbr",
+		"any/git/reset",
+		"any/git/sane",
+		"any/git/sane-",
+		"any/git/switch",
+		"any/git/top",
+		"any/git/unmodified",
+		"any/git/unmodified-",
+		"any/git/update",
+		"any/git/valid",
+		"any/git/valid-",
+		"any/git/where",
+	]
+# }}}
+
+# github {{{
+# -- files
+[[symbols]]
+	symbol  = "any/github/asset"
+	depends = [
+		"all/kernel/die",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "any/github/"
+	depends = [
+		"any/github/asset",
+	]
+# }}}
+
+# net {{{
+# -- files
+[[symbols]]
+	symbol  = "any/net/cat"
+	depends = [
+		"all/kernel/die",
+		"all/kernel/waiting",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "any/net/"
+	depends = [
+		"any/net/cat",
+	]
+# }}}
+
+# any/ {{{
+[[symbols]]
+	symbol  = "any/"
+	depends = [
+		"any/git/",
+		"any/github/",
+		"any/net/",
+	]
+# }}}
+
+# }}}
+
+# debian {{{
+
+# deb {{{
+# -- files
+[[symbols]]
+	symbol  = "debian/deb/addkey"
+	depends = [
+		"all/kernel/die",
+		"all/kernel/intemp",
+		"all/kernel/contains",
+		"all/kernel/running",
+		"any/net/cat",
+	]
+[[symbols]]
+	symbol  = "debian/deb/distexist"
+[[symbols]]
+	symbol  = "debian/deb/distvalid"
+[[symbols]]
+	symbol  = "debian/deb/install"
+	depends = [
+		"all/kernel/waiting",
+		"debian/deb/update",
+	]
+[[symbols]]
+	symbol  = "debian/deb/installed"
+[[symbols]]
+	symbol  = "debian/deb/installmanual"
+	depends = [
+		"all/kernel/die",
+		"all/kernel/intemp",
+		"any/net/cat",
+		"debian/deb/update",
+	]
+[[symbols]]
+	symbol  = "debian/deb/installmissing"
+	depends = [
+		"all/kernel/waiting",
+		"debian/deb/update",
+		"debian/deb/installed",
+	]
+[[symbols]]
+	symbol  = "debian/deb/missings"
+	depends = [
+		"debian/deb/installed",
+	]
+[[symbols]]
+	symbol  = "debian/deb/uninstall"
+	depends = [
+		"all/kernel/die",
+		"debian/deb/missings",
+	]
+[[symbols]]
+	symbol  = "debian/deb/update"
+	depends = [
+		"all/kernel/die",
+		"all/kernel/waiting",
+	]
+[[symbols]]
+	symbol  = "debian/deb/which"
+# -- directory
+[[symbols]]
+	symbol  = "debian/deb/"
+	depends = [
+		"debian/deb/addkey",
+		"debian/deb/distexist",
+		"debian/deb/distvalid",
+		"debian/deb/install",
+		"debian/deb/installed",
+		"debian/deb/installmanual",
+		"debian/deb/installmissing",
+		"debian/deb/missings",
+		"debian/deb/uninstall",
+		"debian/deb/update",
+		"debian/deb/which",
+	]
+# }}}
+
+# git {{{
+# -- files
+[[symbols]]
+	symbol  = "debian/git/bootstrap"
+# -- directory
+[[symbols]]
+	symbol  = "debian/git/"
+	depends = [
+		"debian/git/bootstrap",
+	]
+# }}}
+
+# net {{{
+# -- files
+[[symbols]]
+	symbol  = "debian/net/wait"
+	depends = [
+		"all/kernel/die",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "debian/net/"
+	depends = [
+		"debian/net/wait",
+	]
+# }}}
+
+# os {{{
+# -- files
+[[symbols]]
+	symbol  = "debian/os/any"
+	depends = [
+		"debian/os/is",
+	]
+[[symbols]]
+	symbol  = "debian/os/is"
+	depends = [
+		"debian/os/which",
+	]
+[[symbols]]
+	symbol  = "debian/os/which"
+	depends = [
+		"all/kernel/die",
+	]
+# -- directory
+[[symbols]]
+	symbol  = "debian/os/"
+	depends = [
+		"debian/os/any",
+		"debian/os/is",
+		"debian/os/which",
+	]
+# }}}
+
+# virt {{{
+# -- files
+[[symbols]]
+	symbol  = "debian/virt/any"
+	depends = [
+		"debian/virt/is",
+	]
+[[symbols]]
+	symbol  = "debian/virt/is"
+[[symbols]]
+	symbol  = "debian/virt/which"
+# -- directory
+[[symbols]]
+	symbol  = "debian/virt/"
+	depends = [
+		"debian/virt/any",
+		"debian/virt/is",
+		"debian/virt/which",
+	]
+# }}}
+
+# debian/ {{{
+[[symbols]]
+	symbol  = "debian/"
+	depends = [
+		"debian/deb/",
+		"debian/git/",
+		"debian/net/",
+		"debian/os/",
+		"debian/virt/",
+	]
+# }}}
+
+# }}}
+
+# vim: set foldmethod=marker:
