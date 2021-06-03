@@ -15,5 +15,5 @@ io.sponge-() {
 
 	sed 's/^\s*[.]\t//' >"$dst"
 
-	[[ -z ${mog:-} ]] || file.chmog "$dst"
+	[[ -z ${mog:-} ]] || file.chmog "$mog" "$dst"
 }
