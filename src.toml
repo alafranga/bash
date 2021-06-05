@@ -15,6 +15,14 @@ extension = ".sh"
 		"minimal",
 	]
 [[symbols]]
+	symbol  = "local"
+	depends = [
+		"all/main/prelude",
+		"all/main/startdir",
+		"all/kernel/die",
+		"all/kernel/running",
+	]
+[[symbols]]
 	symbol  = "minimal"
 	depends = [
 		"all/main/prelude",
