@@ -839,7 +839,7 @@ extension = ".sh"
 	symbol  = "any/net/cat"
 	depends = [
 		"all/kernel/die",
-		"all/kernel/waiting",
+		"all/kernel/getting",
 	]
 [[symbols]]
 	symbol  = "any/net/wait"
