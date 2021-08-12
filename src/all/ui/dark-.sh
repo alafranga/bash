@@ -43,7 +43,7 @@ ui.dark-() {
 		"${@:2}"
 	}
 
-	ok_not_ok() {
+	oknotok() {
 		echo -ne "\e[1m\e[38;5;14m>\e[0m \e[1m$1\e[0m" >&2
 		"${@:2}" && ok || notok
 	}

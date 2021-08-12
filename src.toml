@@ -35,6 +35,11 @@ extension = ".sh"
 		"any/net/wait",
 	]
 [[symbols]]
+	symbol  = "prelude"
+	depends = [
+		"all/main/prelude",
+	]
+[[symbols]]
 	symbol  = "standard"
 	depends = [
 		"all/main/prelude",
