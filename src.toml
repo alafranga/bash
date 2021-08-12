@@ -211,6 +211,32 @@ extension = ".sh"
 	]
 [[symbols]]
 	symbol  = "all/color/color"
+[[symbols]]
+	symbol  = "all/color/bug"
+[[symbols]]
+	symbol  = "all/color/bye"
+[[symbols]]
+	symbol  = "all/color/cry"
+[[symbols]]
+	symbol  = "all/color/die"
+[[symbols]]
+	symbol  = "all/color/getting"
+[[symbols]]
+	symbol  = "all/color/haw"
+[[symbols]]
+	symbol  = "all/color/notok"
+[[symbols]]
+	symbol  = "all/color/ok"
+[[symbols]]
+	symbol  = "all/color/oknotok"
+[[symbols]]
+	symbol  = "all/color/running-"
+[[symbols]]
+	symbol  = "all/color/running"
+[[symbols]]
+	symbol  = "all/color/verbose"
+[[symbols]]
+	symbol  = "all/color/waiting"
 # -- directory
 [[symbols]]
 	symbol  = "all/color/"
@@ -330,7 +356,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "all/io/sponge"
 	depends = [
-		"all/kernel/die",
 		"all/kernel/intemp",
 		"all/zip/cat",
 		"all/file/chmog",
@@ -338,7 +363,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "all/io/sponge-"
 	depends = [
-		"all/kernel/die",
 		"all/file/chmog",
 	]
 # -- directory
@@ -438,14 +462,8 @@ extension = ".sh"
 	]
 [[symbols]]
 	symbol  = "all/kernel/ensure"
-	depends = [
-		"all/kernel/die",
-	]
 [[symbols]]
 	symbol  = "all/kernel/ensure-"
-	depends = [
-		"all/kernel/die",
-	]
 [[symbols]]
 	symbol  = "all/kernel/getting"
 [[symbols]]
@@ -454,14 +472,8 @@ extension = ".sh"
 	symbol  = "all/kernel/intemp"
 [[symbols]]
 	symbol  = "all/kernel/load"
-	depends = [
-		"all/kernel/die",
-	]
 [[symbols]]
 	symbol  = "all/kernel/must"
-	depends = [
-		"all/kernel/die",
-	]
 [[symbols]]
 	symbol  = "all/kernel/notok"
 [[symbols]]
@@ -657,14 +669,10 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "all/text/fix"
 	depends = [
-		"all/kernel/die",
 		"all/text/unfix",
 	]
 [[symbols]]
 	symbol  = "all/text/unfix"
-	depends = [
-		"all/kernel/die",
-	]
 # -- directory
 [[symbols]]
 	symbol  = "all/text/"
@@ -710,7 +718,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "all/zip/cat"
 	depends = [
-		"all/kernel/die",
 		"all/kernel/intemp",
 	]
 # -- directory
@@ -756,7 +763,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "any/git/clone"
 	depends = [
-		"all/kernel/die",
 		"all/kernel/waiting",
 	]
 [[symbols]]
@@ -771,7 +777,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "any/git/sane-"
 	depends = [
-		"all/kernel/die",
 		"any/git/sane",
 	]
 [[symbols]]
@@ -790,7 +795,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "any/git/unmodified-"
 	depends = [
-		"all/kernel/die",
 		"any/git/unmodified",
 	]
 [[symbols]]
@@ -799,18 +803,19 @@ extension = ".sh"
 		"all/kernel/waiting",
 	]
 [[symbols]]
+	symbol  = "any/git/update-"
+	depends = [
+		"any/git/unmodified-",
+	]
+[[symbols]]
 	symbol  = "any/git/valid"
 [[symbols]]
 	symbol  = "any/git/valid-"
 	depends = [
-		"all/kernel/die",
 		"any/git/valid",
 	]
 [[symbols]]
 	symbol  = "any/git/where"
-	depends = [
-		"all/kernel/die",
-	]
 # -- directory
 [[symbols]]
 	symbol  = "any/git/"
@@ -835,9 +840,6 @@ extension = ".sh"
 # -- files
 [[symbols]]
 	symbol  = "any/github/asset"
-	depends = [
-		"all/kernel/die",
-	]
 # -- directory
 [[symbols]]
 	symbol  = "any/github/"
@@ -851,14 +853,10 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "any/net/cat"
 	depends = [
-		"all/kernel/die",
 		"all/kernel/getting",
 	]
 [[symbols]]
 	symbol  = "any/net/wait"
-	depends = [
-		"all/kernel/die",
-	]
 # -- directory
 [[symbols]]
 	symbol  = "any/net/"
@@ -887,7 +885,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "debian/deb/addkey"
 	depends = [
-		"all/kernel/die",
 		"all/kernel/intemp",
 		"all/kernel/contains",
 		"all/kernel/running",
@@ -908,7 +905,6 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "debian/deb/installmanual"
 	depends = [
-		"all/kernel/die",
 		"all/kernel/intemp",
 		"any/net/cat",
 		"debian/deb/update",
@@ -928,13 +924,11 @@ extension = ".sh"
 [[symbols]]
 	symbol  = "debian/deb/uninstall"
 	depends = [
-		"all/kernel/die",
 		"debian/deb/missings",
 	]
 [[symbols]]
 	symbol  = "debian/deb/update"
 	depends = [
-		"all/kernel/die",
 		"all/kernel/waiting",
 	]
 [[symbols]]
@@ -983,9 +977,6 @@ extension = ".sh"
 	]
 [[symbols]]
 	symbol  = "debian/os/which"
-	depends = [
-		"all/kernel/die",
-	]
 # -- directory
 [[symbols]]
 	symbol  = "debian/os/"
