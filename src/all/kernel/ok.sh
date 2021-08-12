@@ -1,3 +1,3 @@
 ok() {
-	echo -e >&2 "notok $*"
+	echo -e "notok $*" >&2
 }

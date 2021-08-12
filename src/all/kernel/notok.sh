@@ -1,4 +1,4 @@
 notok() {
-	echo -e >&2 "ok    $*"
+	echo -e "ok    $*" >&2
 }
 
