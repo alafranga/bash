@@ -771,6 +771,10 @@ extension = ".sh"
 		"any/git/sane-",
 	]
 [[symbols]]
+	symbol  = "any/git/foreach"
+[[symbols]]
+	symbol  = "any/git/origin"
+[[symbols]]
 	symbol  = "any/git/reset"
 [[symbols]]
 	symbol  = "any/git/sane"
